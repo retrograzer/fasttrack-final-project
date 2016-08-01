@@ -1,0 +1,28 @@
+<div class="container-fluid">
+		<div class="col-md-10 col-md-offset-1">
+			<div class="jumbotron">
+				<h1 id="inIt">Login</h1>
+			</div>
+			<div>
+				<form ng-submit="loginController.login()">
+					<h3>Username</h3>
+						<input name="username" ng-model="loginController.username" id="textbox"></input>
+					<h3>Password</h3>
+						<input name="password" ng-model="loginController.password" id="textbox"></input>
+					<br>
+					<br>
+					<button class="button" type="submit" id="inIt">Login</button>
+				</form>
+				<form ng-submit="loginController.register()">
+					<h1>NEW USER REGISTRATION</h1>
+					<h4>New Username</h3>
+						<input name="username" ng-model="loginController.Rusername" id="textbox"></input>
+					<h4>New Password</h3>
+						<input name="password" ng-model="loginController.Rpassword" id="textbox"></input>
+					<br>
+					<br>
+					<button class="button" type="submit" id="inIt">Register</button>
+				</form>
+			</div>
+	</div>
+</div>

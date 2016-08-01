@@ -1,0 +1,43 @@
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	color: white;
+	background: #2C8BAE;
+	background-image: url("http://images.clipartpanda.com/world-clip-art-black-and-white-world-md.png"); 
+	background-repeat: no-repeat;
+	background-position: center;
+    background-attachment: local;
+}
+
+#map {
+	height: 100vh;
+	width: 95vw;
+	border: 5px solid black;
+}
+
+.jumbotron {
+	background: #01B6F9;
+	color: white;
+}
+
+#textbox {
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	color: black;
+}
+
+.button {
+	background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}

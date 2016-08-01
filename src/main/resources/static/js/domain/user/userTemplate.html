@@ -1,0 +1,55 @@
+<div class="container-fluid">
+	<div class="col-md-10 col-md-offset-1">
+		<div class="jumbotron">
+			<h1 id="inIt">User</h1>
+		</div>
+			<button class="button" ng-click="userController.switchPage()">Back to Map</button>
+		<div ng-init="userController.allItens()">
+			<h1>All Past Itineraries</h1>
+			<ol>
+				<li ng-repeat="x in userController.userItens">From: {{x.origin}} -> To: {{x.destination}}</li>
+			</ol>
+			<h1>(manual)New Itinerary</h1>
+			<form ng-submit="userController.manualItens()">
+					<h3>From:</h3>
+						<input name="origin" ng-model="userController.origin" id="textbox"></input>
+					<h3>To:</h3>
+						<input name="destination" ng-model="userController.destination" id="textbox"></input>
+					<br>
+					<button class="button" type="submit" id="inIt">Create</button>
+			</form>
+		</div>
+		
+		<div ng-init="userController.allFlights()">
+			<h1>Current Flights</h1>
+			<ul ng-repeat="x in userController.flights">
+				<li><strong>From:</strong> <font color="#FFAA00">{{x.origin}}</font> 
+					<strong>To:</strong> <font color="#FFAA00">{{x.destination}}</font>  
+					<strong>Flight Time:</strong> <font color="#FFAA00">{{x.flightTime}}</font>  
+					<strong>Offset:</strong> <font color="#FFAA00">{{x.offset}}</font> </li>
+				<button class="button" ng-click="userController.createItens(x.origin, x.destination, x.flightTime)">Book Now!</button>
+			</ul>
+		</div>
+		<!-- 
+		<div>
+			<h1>Search By Origin</h1>
+			<form ng-submit="userController.searchDest()">
+				<h3>Origin:</h3>
+					<input name="search" ng-model="userController.search" id="inIt"></input>
+				<br>
+				<button type="submit" id="inIt">Search</button>
+			</form>
+			<ol>
+				<li ng-repeat="x in userController.response track by $index">{{x}}</li>
+			</ol>
+		</div> -->
+	<br>
+	<div>
+		<p><font color="#08FF04">Green Line:</font> Origin to Midpoint</p>
+		<p><font color="#04FFFB">Blue Line:</font> Midpoint to Destination</p>
+		<p><font color="#AC1F1F">Red Line:</font> Origin to Destinationa</p>
+		<p><i>Flight Time:</i> {{userController.totalTime}}</p>
+		<p><i>Total Layover:</i> {{userController.totalLayover}}</p>
+	</div> 
+</div>
+<div id="map"></div> 
